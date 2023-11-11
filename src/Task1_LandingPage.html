@@ -1,0 +1,1049 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <!-- Owl Caraousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&family=Jost&family=Oswald:wght@500&family=Pacifico&family=Poppins:wght@300&family=Raleway&family=Roboto&family=Satisfy&family=Sofia+Sans+Condensed:ital,wght@1,300&family=Urbanist&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body style="font-family: 'Poppins', sans-serif;">
+    <!-- Heading Navbar -->
+    <header class="text-gray-600 bg-gray-50 border-b border-violet-500 body-font sticky z-20" style="top: 0%;">
+        <div class="container mx-auto flex flex-wrap px-5 py-2 gap-6 flex-row items-center justify-between">
+            <a class="flex title-font font-medium items-center justify-center text-gray-900">
+                <img src="./images/Task1/Logo.jpg" alt="" class="w-20">
+                <span class="ml-3 text-3xl font-semibold tracking-wider"
+                    style="font-family: 'Satisfy', cursive;">BharatDarshan</span>
+            </a>
+            <nav id="nav"
+                class="hidden md:ml-auto md:mr-auto xl:flex flex-wrap items-center text-base font-semibold text-bl tracking-widest justify-center gap-3">
+                <a href="#home"
+                    class="hover:text-violet-600 hover:font-semibold hover:underline hover:underline-offset-8">Home</a>
+                <a href="#about"
+                    class="hover:text-violet-600 hover:font-semibold hover:underline hover:underline-offset-8">About
+                    Us</a>
+                <a href="#destinations"
+                    class="hover:text-violet-600 hover:font-semibold hover:underline hover:underline-offset-8">Destinations</a>
+                <a href="#services"
+                    class="hover:text-violet-600 hover:font-semibold hover:underline hover:underline-offset-8">Our
+                    Services</a>
+                <a href="#testimonials"
+                    class="hover:text-violet-600 hover:font-semibold hover:underline hover:underline-offset-8">Testimonials</a>
+                <a href="#planyourtrip"
+                    class="hover:text-violet-600 hover:font-semibold hover:underline hover:underline-offset-8">Plan Your
+                    Trip</a>
+                <a href="#contactus"
+                    class="hover:text-violet-600 hover:font-semibold hover:underline hover:underline-offset-8">Contact
+                    Us</a>
+            </nav>
+            <button
+                class="hidden xl:inline-flex items-center bg-gray-900 border-0 py-2 tracking-widest font-semibold px-6 active:translate-x-2 active:translate-y-2 
+            duration-300 focus:outline-none text-white hover:bg-violet-500 rounded-lg text-base mt-4 md:mt-0 shadow-lg">Sign
+                Up &nbsp;
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-7 h-7">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+            </button>
+
+            <!-- Humberberg -->
+            <div class="xl:hidden">
+                <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+
+                <!-- Dropdown menu -->
+                <div id="dropdown" class="z-10 hidden bg-white  rounded-lg shadow-lg w-40 mr-4">
+                    <ul id="" class="text-sm text-gray-800 rounded-lg divide-y divide-gray-300"
+                        aria-labelledby="dropdownDefaultButton">
+                        <li>
+                            <a href="#home"
+                                class="block px-4 py-2 hover:bg-violet-600 hover:text-white rounded-lg">Home</a>
+                        </li>
+                        <li>
+                            <a href="#about" class="block px-4 py-2 hover:bg-violet-600 hover:text-white rounded-lg">About</a>
+                        </li>
+                        <li>
+                            <a href="#destinations"
+                                class="block px-4 py-2 hover:bg-violet-600 hover:text-white rounded-lg">Destinations</a>
+                        </li>
+                        <li>
+                            <a href="#services"
+                                class="block px-4 py-2 hover:bg-violet-600 hover:text-white rounded-lg">Services</a>
+                        </li>
+                        <li>
+                            <a href="#testimonials"
+                                class="block px-4 py-2 hover:bg-violet-600 hover:text-white rounded-lg">Testimonials</a>
+                        </li>
+                        <li>
+                            <a href="#planyourtrip"
+                                class="block px-4 py-2 hover:bg-violet-600 hover:text-white rounded-lg">Plan Your Trip</a>
+                        </li>
+                        <li>
+                            <a href="#contactus"
+                                class="block px-4 py-2 hover:bg-violet-600 hover:text-white rounded-lg">Contact Us</a>
+                        </li>
+                        <li>
+                            <a href="" class="block px-4 py-2 hover:bg-teal-violeth6ver:text-white rounded-lg">Sign
+                                Up</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- humberberg End -->
+
+        </div>
+    </header>
+    <!-- Heading Navbar End -->
+
+    <!-- Hero Section -->
+    <section id="home" class="container mx-auto text-gray-600 body-font">
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <img src="./images/b1.jpg" alt="" style="" class="h-auto md:h-5/6 lg:h-1/3 xl:h-3/6">
+            </div>
+            <div class="item">
+                <img src="./images/B3.jpg" alt="" style="" class="h-auto md:h-5/6 lg:h-1/3 xl:h-3/6">
+            </div>
+            <div class="item">
+                <img src="./images/B4.jpg" alt="" style="" class="h-auto md:h-5/6 lg:h-1/3 xl:h-3/6">
+            </div>
+            <div class="item">
+                <img src="./images/B5.jpg" alt="" style="" class="h-auto md:h-5/6 lg:h-1/3 xl:h-3/6">
+            </div>
+            <div class="item">
+                <img src="./images/B6.jpg" alt="" style="" class="h-auto md:h-5/6 lg:h-1/3 xl:h-3/6">
+            </div>
+            <div class="item">
+                <img src="./images/B7.jpg" alt="" style="" class="h-auto md:h-5/6 lg:h-1/3 xl:h-3/6">
+            </div>
+        </div>
+    </section>
+    <!-- Hero SEction End -->
+
+    <!-- About US 1 Stat -->
+    <section id="about"
+        class="text-gray-600 body-font bg-gradient-to-tr from-fuchsia-100 via-violet-100 to-fuchsia-100">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-col text-center w-full mb-20">
+                <h1 class="sm:text-3xl text-2xl font-medium tracking-wider title-font mb-4 text-gray-900"
+                    style="font-family: 'Urbanist', sans-serif;">Behind the Scenes: The
+                    Metrics that Drive Our Tourist Wonderland. </h1>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base"> Dive into the heart of our operations and
+                    discover the fascinating world of data that powers every adventure. From visitor trends to booking
+                    conversions, explore the numbers shaping your journey on our platform. Your exploration, our
+                    insights! </p>
+            </div>
+            <div class="flex flex-wrap -m-4 text-center">
+                <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+                    <div class="border border-gray-300 px-4 py-6 rounded-lg bg-white hover:shadow-lg duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="text-purple-500 w-12 h-12 mb-3 inline-block">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                        </svg>
+
+                        <h2 class="title-font font-medium text-3xl text-gray-900">80K+</h2>
+                        <p class="leading-relaxed">Monthly Visitors</p>
+                    </div>
+                </div>
+                <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+                    <div class="border border-gray-300 px-4 py-6 rounded-lg bg-white hover:shadow-lg duration-300">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="text-purple-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
+                        </svg>
+                        <h2 class="title-font font-medium text-3xl text-gray-900">60K+</h2>
+                        <p class="leading-relaxed">Tourist Engagement</p>
+                    </div>
+                </div>
+                <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+                    <div class="border border-gray-300 px-4 py-6 rounded-lg bg-white hover:shadow-lg duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="text-purple-500 w-12 h-12 mb-3 inline-block">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
+                        </svg>
+                        <h2 class="title-font font-medium text-3xl text-gray-900">2000+</h2>
+                        <p class="leading-relaxed">Hotel Partnerships</p>
+                    </div>
+                </div>
+                <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+                    <div class="border border-gray-300 px-4 py-6 rounded-lg bg-white hover:shadow-lg duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="text-purple-500 w-12 h-12 mb-3 inline-block">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0l6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 014.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 00-.38 1.21 12.035 12.035 0 007.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 011.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 01-2.25 2.25h-2.25z" />
+                        </svg>
+                        <h2 class="title-font font-medium text-3xl text-gray-900">1M+</h2>
+                        <p class="leading-relaxed">Booking Conversions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About US 1 Stat End -->
+
+    <!-- Content -->
+    <section id="destinations" class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+
+            <div class="flex flex-col text-center w-full mb-20">
+                <h2 class="text-sm text-purple-500 tracking-widest font-medium title-font mb-2">Explore the Unexplored
+                </h2>
+                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Unlock the Wonders of Our
+                    Destinations</h1>
+                <p class="lg:w-2/3 mx-auto leading-loose text-base">Embark on a journey beyond the ordinary with our
+                    "Destinations" section. From the vibrant streets of Kolkata to the serene backwaters of Kerala, each
+                    location is a tapestry of culture, history, and natural beauty. Discover the unexplored and create
+                    lasting memories in the destinations that capture the essence of your travel dreams. Your adventure
+                    begins here. Explore, experience, and embrace the magic of diverse landscapes and rich heritage.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-4 ">
+                <div class="bg-slate-100 p-6 rounded-lg shadow-md hover:shadow-xl duration-300">
+                    <img class="h-40 rounded w-full object-cover object-center mb-6" src="./images/C1.jpg"
+                        alt="content">
+                    <h3 class="tracking-widest text-purple-500 text-sm font-semibold title-font">City of Joy</h3>
+                    <h2 class="text-lg text-gray-900 font-medium title-font my-2">Kolkata</h2>
+                    <p class="leading-relaxed tracking-wider text-justify text-base">Immerse yourself in the vibrant
+                        culture of Kolkata. Explore
+                        historic landmarks, savor delectable street food, and witness the charm of the Howrah
+                        Bridge. Your journey begins in the City of Joy!</p>
+                </div>
+                <div class="bg-slate-100 p-6 rounded-lg shadow-md hover:shadow-xl duration-300">
+                    <img class="h-40 rounded w-full object-cover object-center mb-6" src="./images/C2.jpg"
+                        alt="content">
+                    <h3 class="tracking-widest text-purple-500 text-sm font-semibold title-font">Gateway to the
+                        South</h3>
+                    <h2 class="text-lg text-gray-900 font-medium title-font my-2">Chennai</h2>
+                    <p class="leading-relaxed tracking-wider text-justify text-base">Chennai welcomes you with its
+                        rich history and modern vibrancy. From the serene Marina Beach to the bustling streets of
+                        Mylapore, discover the cultural tapestry of Southern India in this coastal metropolis.</p>
+                </div>
+                <div class="bg-slate-100 p-6 rounded-lg shadow-md hover:shadow-xl duration-300">
+                    <img class="h-40 rounded w-full object-cover object-center mb-6" src="./images/C3.jpg"
+                        alt="content">
+                    <h3 class="tracking-widest text-purple-500 text-sm font-semibold title-font">God's Own Country</h3>
+                    <h2 class="text-lg text-gray-900 font-medium title-font my-2">Kerala</h2>
+                    <p class="leading-relaxed tracking-wider text-justify text-base"> Embark on a journey through the
+                        enchanting backwaters of Kerala. Cruise on traditional houseboats, indulge in aromatic spices,
+                        and witness the lush landscapes that earned Kerala its heavenly nickname.</p>
+                </div>
+                <div class="bg-slate-100 p-6 rounded-lg shadow-md hover:shadow-xl duration-300">
+                    <img class="h-40 rounded w-full object-cover object-center mb-6" src="./images/C4.png"
+                        alt="content">
+                    <h3 class="tracking-widest text-purple-500 text-sm font-semibold title-font">Paradise on Earth
+                    </h3>
+                    <h2 class="text-lg text-gray-900 font-medium title-font my-2">Kashmir</h2>
+                    <p class="leading-relaxed tracking-wider text-justify text-base">Lose yourself in the picturesque
+                        valleys and snow-capped peaks of Kashmir. From the serene Dal Lake to the vibrant markets of
+                        Srinagar, experience the magic that has made Kashmir a timeless destination.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Content End -->
+
+    <!-- About Us 2 -->
+    <section id="services"
+        class="text-gray-600 body-font bg-gradient-to-tr from-fuchsia-100 via-violet-100 to-fuchsia-100">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="text-center mb-20">
+                <h1 class="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 mb-4">Elevate Your
+                    Experience with Our Exceptional Services</h1>
+                <p class="xl:w-2/3 leading-loose text-base lg:w-3/4 mx-auto">Embark on a journey like never before as
+                    we redefine travel with our exceptional services. From meticulously tailored tour packages to
+                    seamless travel planning, we prioritize your comfort and satisfaction at every step. Immerse
+                    yourself in the authenticity of each destination with our expert local guides and indulge in premium
+                    accommodations for a truly elevated experience. Whether you crave cultural immersion, adventure, or
+                    relaxation, our 24/7 customer support ensures your journey is smooth and worry-free. Your adventure
+                    begins with us – where excellence meets exploration.
+                </p>
+            </div>
+            <div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
+                <div class="p-2 sm:w-1/2 w-full">
+                    <div class="bg-white shadow-md rounded flex p-4 h-full items-center">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="3" class="text-purple-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                        <span class="title-font font-medium">Tailored Tour Packages</span>
+                    </div>
+                </div>
+                <div class="p-2 sm:w-1/2 w-full">
+                    <div class="bg-white shadow-md rounded flex p-4 h-full items-center">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="3" class="text-purple-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                        <span class="title-font font-medium">Hassle-Free Travel Planning</span>
+                    </div>
+                </div>
+                <div class="p-2 sm:w-1/2 w-full">
+                    <div class="bg-white shadow-md rounded flex p-4 h-full items-center">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="3" class="text-purple-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                        <span class="title-font font-medium">Expert Local Guides</span>
+                    </div>
+                </div>
+                <div class="p-2 sm:w-1/2 w-full">
+                    <div class="bg-white shadow-md rounded flex p-4 h-full items-center">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="3" class="text-purple-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                        <span class="title-font font-medium">Premium Accommodations</span>
+                    </div>
+                </div>
+                <div class="p-2 sm:w-1/2 w-full">
+                    <div class="bg-white shadow-md rounded flex p-4 h-full items-center">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="3" class="text-purple-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                        <span class="title-font font-medium">Exclusive Cultural Experiences</span>
+                    </div>
+                </div>
+                <div class="p-2 sm:w-1/2 w-full">
+                    <div class="bg-white shadow-md rounded flex p-4 h-full items-center">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="3" class="text-purple-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                        <span class="title-font font-medium">Seamless Transportation</span>
+                    </div>
+                </div>
+                <div class="p-2 sm:w-1/2 w-full">
+                    <div class="bg-white shadow-md rounded flex p-4 h-full items-center">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="3" class="text-purple-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                        <span class="title-font font-medium">Exclusive Cultural Experiences</span>
+                    </div>
+                </div>
+                <div class="p-2 sm:w-1/2 w-full">
+                    <div class="bg-white shadow-md rounded flex p-4 h-full items-center">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="3" class="text-purple-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                        <span class="title-font font-medium">24/7 Customer Support</span>
+                    </div>
+                </div>
+                <div class="p-2 sm:w-1/2 w-full">
+                    <div class="bg-white shadow-md rounded flex p-4 h-full items-center">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="3" class="text-purple-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                        <span class="title-font font-medium">Personalized Itineraries</span>
+                    </div>
+                </div>
+                <div class="p-2 sm:w-1/2 w-full">
+                    <div class="bg-white shadow-md rounded flex p-4 h-full items-center">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="3" class="text-purple-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                        <span class="title-font font-medium">Group and Solo Travel Options</span>
+                    </div>
+                </div>
+                <div class="p-2 sm:w-1/2 w-full">
+                    <div class="bg-white shadow-md rounded flex p-4 h-full items-center">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="3" class="text-purple-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                        <span class="title-font font-medium">Specialized Adventure Tours</span>
+                    </div>
+                </div>
+                <div class="p-2 sm:w-1/2 w-full">
+                    <div class="bg-white shadow-md rounded flex p-4 h-full items-center">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="3" class="text-purple-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                        <span class="title-font font-medium">Customized Packages for Every Budget</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- About Us 2 -->
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="text-gray-600 body-font py-8">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="text-center mb-20">
+                <h1 class="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 mb-4">What Our Tourists
+                    Says</h1>
+                <p class="xl:w-2/3 leading-loose text-base lg:w-3/4 mx-auto">Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Ipsa hic beatae eos nemo, architecto aperiam veritatis distinctio laborum at ea
+                    facilis, reprehenderit quisquam tempora dignissimos quaerat. Dolore exercitationem explicabo dolorem
+                    quisquam distinctio quaerat quos reprehenderit sequi alias at! Beatae distinctio ullam atque? Ipsam
+                    quaerat rerum excepturi nostrum consequatur deserunt similique.
+                </p>
+            </div>
+            <div class="flex flex-wrap -m-4">
+                <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
+                    <div class="h-full text-center">
+                        <img alt="testimonial"
+                            class="w-1/2 h-1/2 mb-8 object-cover hover:scale-105 duration-300 object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
+                            src="./images/Task1/w2.jpg">
+                        <p class="leading-relaxed">"BharatDarshan made my dream vacation a reality! From the bustling
+                            markets of Delhi to the tranquil backwaters of Kerala, every moment was flawlessly curated.
+                            The attention to detail, expert guides, and seamless logistics exceeded my expectations.
+                            Truly a journey to remember!"</p>
+                        <span class="inline-block h-1 w-10 rounded bg-purple-500 mt-6 mb-4"></span>
+                        <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm uppercase">Rajashree
+                            Kumari</h2>
+                        <p class="text-gray-500">Mumbai, India</p>
+                    </div>
+                </div>
+                <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
+                    <div class="h-full text-center">
+                        <img alt="testimonial"
+                            class="w-1/2 h-1/2 mb-8 object-cover hover:scale-105 duration-300 object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
+                            src="./images/Task1/m1.jpg">
+                        <p class="leading-relaxed">"BharatDarshan is my go-to for discovering the beauty of India. The
+                            personalized itineraries allowed me to explore hidden gems and connect with the rich
+                            culture. The team's commitment to excellence and customer satisfaction is evident in every
+                            aspect. Can't wait for my next adventure with them!"</p>
+                        <span class="inline-block h-1 w-10 rounded bg-purple-500 mt-6 mb-4"></span>
+                        <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm uppercase">ALPER KAMU
+                        </h2>
+                        <p class="text-gray-500"> London, UK</p>
+                    </div>
+                </div>
+                <div class="lg:w-1/3 lg:mb-0 p-4">
+                    <div class="h-full text-center">
+                        <img alt="testimonial"
+                            class="w-1/2 h-1/2 mb-8 object-cover hover:scale-105 duration-300 object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
+                            src="./images/Task1/W4.jpg">
+                        <p class="leading-relaxed">"BharatDarshan made my solo trip to India an unforgettable
+                            experience. Their emphasis on safety, diverse travel options, and the warmth of the local
+                            guides made me feel at home. The team's dedication to responsible tourism and cultural
+                            immersion is commendable. Highly recommend for any traveler seeking authenticity and
+                            adventure."</p>
+                        <span class="inline-block h-1 w-10 rounded bg-purple-500 mt-6 mb-4"></span>
+                        <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">Jemimah Rodregues</h2>
+                        <p class="text-gray-500">New York, USA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials End -->
+
+    <!-- Plan Your Trip -->
+    <section id="planyourtrip"
+        class="text-gray-600 body-font bg-gradient-to-tr from-fuchsia-100 via-violet-100 to-fuchsia-100">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="text-center mb-20">
+                <h1 class="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 mb-4">Unlock Your
+                    Journey - Navigate the World with Our "Plan Your Trip" Section</h1>
+                <p class="xl:w-2/3 leading-loose text-base lg:w-3/4 mx-auto">Embark on a seamless travel planning
+                    experience with our "Plan Your Trip" section. From comprehensive travel guides and essential tips to
+                    visa information and currency exchange, we've got you covered. Let us be your compass as you chart a
+                    course through the world's wonders. Your adventure begins with meticulous planning and ends with
+                    unforgettable memories. Explore, discover, and plan your journey effortlessly with BharatDarshan.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-6">
+                <div class="px-4 py-6 w-full bg-white shadow-md hover:shadow-xl duration-300">
+                    <a class="block relative h-48 rounded overflow-hidden">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+                            src="./images/Task1/E_Ahmedabad.jpg">
+                    </a>
+                    <div class="mt-4">
+                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">2 Nights 3 Days</h3>
+                        <h2 class="text-gray-900 title-font font-semibold text-lg">Ahmedabad</h2>
+                        <p class="mt-1 font-medium text-violet-500">&#x20B9; 32000 (Each Person)</p>
+                        <p class="text-justify mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, quis
+                            accusamus voluptas
+                            aspernatur quam, ex quas fugit ad enim eos saepe perspiciatis tempore numquam culpa.</p>
+                    </div>
+                </div>
+                <div class="px-4 py-6 w-full bg-white shadow-md hover:shadow-xl duration-300">
+                    <a class="block relative h-48 rounded overflow-hidden">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+                            src="./images/Task1/E_Andaman.jpg">
+                    </a>
+                    <div class="mt-4">
+                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">6 Nights 7 Days</h3>
+                        <h2 class="text-gray-900 title-font font-semibold text-lg">Andaman & Nicobor Island</h2>
+                        <p class="mt-1 font-medium text-violet-500">&#x20B9; 75000 (Each Person)</p>
+                        <p class="text-justify mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, quis
+                            accusamus voluptas
+                            aspernatur quam, ex quas fugit ad enim eos saepe perspiciatis tempore numquam culpa.</p>
+                    </div>
+                </div>
+                <div class="px-4 py-6 w-full bg-white shadow-md hover:shadow-xl duration-300">
+                    <a class="block relative h-48 rounded overflow-hidden">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+                            src="./images/Task1/E_Goa.jpg">
+                    </a>
+                    <div class="mt-4">
+                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">2 Nights 3 Days</h3>
+                        <h2 class="text-gray-900 title-font font-semibold text-lg">Goa</h2>
+                        <p class="mt-1 font-medium text-violet-500">&#x20B9; 52000 (Each Person)</p>
+                        <p class="text-justify mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, quis
+                            accusamus voluptas
+                            aspernatur quam, ex quas fugit ad enim eos saepe perspiciatis tempore numquam culpa.</p>
+                    </div>
+                </div>
+                <div class="px-4 py-6 w-full bg-white shadow-md hover:shadow-xl duration-300">
+                    <a class="block relative h-48 rounded overflow-hidden">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+                            src="./images/Task1/E_Kashmir.png">
+                    </a>
+                    <div class="mt-4">
+                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">6 Nights 7 Days</h3>
+                        <h2 class="text-gray-900 title-font font-semibold text-lg">Ahmedabad</h2>
+                        <p class="mt-1 font-medium text-violet-500">&#x20B9; 60000 (Each Person)</p>
+                        <p class="text-justify mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, quis
+                            accusamus voluptas
+                            aspernatur quam, ex quas fugit ad enim eos saepe perspiciatis tempore numquam culpa.</p>
+                    </div>
+                </div>
+                <div class="px-4 py-6 w-full bg-white shadow-md hover:shadow-xl duration-300">
+                    <a class="block relative h-48 rounded overflow-hidden">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+                            src="./images/Task1/E_Kerala.jpg">
+                    </a>
+                    <div class="mt-4">
+                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">5 Nights 6 Days</h3>
+                        <h2 class="text-gray-900 title-font font-semibold text-lg">Kerala</h2>
+                        <p class="mt-1 font-medium text-violet-500">&#x20B9; 62000 (Each Person)</p>
+                        <p class="text-justify mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, quis
+                            accusamus voluptas
+                            aspernatur quam, ex quas fugit ad enim eos saepe perspiciatis tempore numquam culpa.</p>
+                    </div>
+                </div>
+                <div class="px-4 py-6 w-full bg-white shadow-md hover:shadow-xl duration-300">
+                    <a class="block relative h-48 rounded overflow-hidden">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+                            src="./images/Task1/E_Kolkata.jpg">
+                    </a>
+                    <div class="mt-4">
+                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">2 Nights 3 Days</h3>
+                        <h2 class="text-gray-900 title-font font-semibold text-lg">Kolkata</h2>
+                        <p class="mt-1 font-medium text-violet-500">&#x20B9; 24000 (Each Person)</p>
+                        <p class="text-justify mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, quis
+                            accusamus voluptas
+                            aspernatur quam, ex quas fugit ad enim eos saepe perspiciatis tempore numquam culpa.</p>
+                    </div>
+                </div>
+                <div class="px-4 py-6 w-full bg-white shadow-md hover:shadow-xl duration-300">
+                    <a class="block relative h-48 rounded overflow-hidden">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+                            src="./images/Task1/E_Mumbai.jpg">
+                    </a>
+                    <div class="mt-4">
+                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">2 Nights 3 Days</h3>
+                        <h2 class="text-gray-900 title-font font-semibold text-lg">Mumbai</h2>
+                        <p class="mt-1 font-medium text-violet-500">&#x20B9; 52000 (Each Person)</p>
+                        <p class="text-justify mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, quis
+                            accusamus voluptas
+                            aspernatur quam, ex quas fugit ad enim eos saepe perspiciatis tempore numquam culpa.</p>
+                    </div>
+                </div>
+                <div class="px-4 py-6 w-full bg-white shadow-md hover:shadow-xl duration-300">
+                    <a class="block relative h-48 rounded overflow-hidden">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+                            src="./images/Task1/E_Northeast.jpg">
+                    </a>
+                    <div class="mt-4">
+                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">6 Nights 7 Days</h3>
+                        <h2 class="text-gray-900 title-font font-semibold text-lg">North East of India</h2>
+                        <p class="mt-1 font-medium text-violet-500">&#x20B9; 80000 (Each Person)</p>
+                        <p class="text-justify mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, quis
+                            accusamus voluptas
+                            aspernatur quam, ex quas fugit ad enim eos saepe perspiciatis tempore numquam culpa.</p>
+                    </div>
+                </div>
+                <Fieldset></Fieldset>
+            </div>
+        </div>
+    </section>
+    <!-- Plan Your Trip End -->
+
+    <!-- Our Team -->
+    <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-col text-center w-full mb-20">
+                <h1 class="text-2xl font-medium title-font mb-4 text-gray-900">OUR TEAM</h1>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn
+                    asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 2xl:grid-cols-4 gap-6">
+                <div class="p-4 border border-violet-400 shadow-md hover:shadow-xl hover:scale-105 duration-300">
+                    <div class="h-full flex flex-col items-center text-center">
+                        <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+                            src="./images/Task1/t1.jpg">
+                        <div class="w-full">
+                            <h2 class="title-font font-medium text-lg text-gray-900">Alper Kamu</h2>
+                            <h3 class="text-gray-500 mb-3">UI Developer</h3>
+                            <p class="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.
+                            </p>
+                            <span class="inline-flex">
+                                <a class="text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                                    </svg>
+                                </a>
+                                <a class="ml-2 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a class="ml-2 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 border border-violet-400 shadow-md hover:shadow-xl hover:scale-105 duration-300">
+                    <div class="h-full flex flex-col items-center text-center">
+                        <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+                            src="./images/Task1/T2.jpg">
+                        <div class="w-full">
+                            <h2 class="title-font font-medium text-lg text-gray-900">Holden Caulfield</h2>
+                            <h3 class="text-gray-500 mb-3">UI Developer</h3>
+                            <p class="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.
+                            </p>
+                            <span class="inline-flex">
+                                <a class="text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                                    </svg>
+                                </a>
+                                <a class="ml-2 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a class="ml-2 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 border border-violet-400 shadow-md hover:shadow-xl hover:scale-105 duration-300">
+                    <div class="h-full flex flex-col items-center text-center">
+                        <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+                            src="./images/Task1/T3.jpg">
+                        <div class="w-full">
+                            <h2 class="title-font font-medium text-lg text-gray-900">Atticus Finch</h2>
+                            <h3 class="text-gray-500 mb-3">UI Developer</h3>
+                            <p class="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.
+                            </p>
+                            <span class="inline-flex">
+                                <a class="text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                                    </svg>
+                                </a>
+                                <a class="ml-2 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a class="ml-2 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 border border-violet-400 shadow-md hover:shadow-xl hover:scale-105 duration-300">
+                    <div class="h-full flex flex-col items-center text-center">
+                        <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+                            src="./images/Task1/T4.jpg">
+                        <div class="w-full">
+                            <h2 class="title-font font-medium text-lg text-gray-900">Henry Letham</h2>
+                            <h3 class="text-gray-500 mb-3">UI Developer</h3>
+                            <p class="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.
+                            </p>
+                            <span class="inline-flex">
+                                <a class="text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                                    </svg>
+                                </a>
+                                <a class="ml-2 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a class="ml-2 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Our Team End -->
+
+    <!-- Cta SEction -->
+    <section id="contactus"
+        class="text-gray-600 body-font relative  bg-gradient-to-tr from-fuchsia-100 via-violet-100 to-fuchsia-100">
+        <div class="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
+            <div
+                class="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.2246202805673!2d77.10642107550373!3d28.71283247562094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0108408a3e35%3A0xe5648efc41eb0656!2sBharat%20Dharshan!5e0!3m2!1sen!2sin!4v1699651717313!5m2!1sen!2sin"
+                    width="100%" height="100%" class="absolute inset-0" frameborder="0" title="map" marginheight="0"
+                    marginwidth="0" scrolling="no"></iframe>
+                <div class="bg-white relative flex flex-wrap py-6 rounded shadow-md">
+                    <div class="lg:w-1/2 px-6">
+                        <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">ADDRESS</h2>
+                        <p class="mt-1">C5/90 1st floor, Sector 6 Rd, near Rithala Mod, Rohini, New Delhi, Delhi 110085
+                        </p>
+                    </div>
+                    <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
+                        <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">EMAIL</h2>
+                        <a class="text-purple-500 leading-relaxed">bharatdarshan123@gbharat.com</a>
+                        <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">PHONE</h2>
+                        <p class="leading-relaxed">123-456-7890</p>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 py-6 px-4 shadow-lg">
+                <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">Your Messege</h2>
+                <p class="leading-relaxed mb-5 text-gray-600">Please provide your details along with messege/p>
+                <div class="relative mb-4">
+                    <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
+                    <input type="text" id="name" name="name"
+                        class="w-full bg-white rounded border border-gray-300 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+                <div class="relative mb-4">
+                    <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+                    <input type="email" id="email" name="email"
+                        class="w-full bg-white rounded border border-gray-300 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+                <div class="relative mb-4">
+                    <label for="message" class="leading-7 text-sm text-gray-600">Message</label>
+                    <textarea id="message" name="message"
+                        class="w-full bg-white rounded border border-gray-300 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                </div>
+                <button
+                    class="text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none 
+                    hover:bg-purple-600 rounded-md active:translate-x-2 active:translate-y-2 duration-300 text-lg">Send</button>
+                <p class="text-xs text-gray-500 mt-3 tracking-wider">We will contact with you later</p>
+            </div>
+        </div>
+    </section>
+    <!-- Cta SEction End -->
+
+    <!-- Footer -->
+    <footer class="text-gray-600 bg-white body-font">
+        <div
+            class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+            <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
+                <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+                    <img src="./images/Task1/Logo.jpg" alt="" class="w-24">
+                    <span class="ml-3 text-xl tracking-wider"
+                        style="font-family: 'Satisfy', cursive;">BharatDarshan</span>
+                </a>
+            </div>
+            <div class="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first">
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-semibold text-gray-900 tracking-widest text-base mb-3">Pages</h2>
+                    <nav class="list-none mb-10">
+                        <li>
+                            <a href="#" class="hover:text-violet-600 hover:font-semibold tracking-wider">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-violet-600 hover:font-semibold tracking-wider">About</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-violet-600 hover:font-semibold tracking-wider">Services</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-violet-600 hover:font-semibold tracking-wider">Plan Your
+                                Trip</a>
+                        </li>
+                    </nav>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-semibold text-gray-900 tracking-widest text-base mb-3">Pages</h2>
+                    <nav class="list-none mb-10">
+                        <li>
+                            <a href="#"
+                                class="hover:text-violet-600 hover:font-semibold tracking-wider">Testimonials</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-violet-600 hover:font-semibold tracking-wider">Tour Guides</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-violet-600 hover:font-semibold tracking-wider">Resorts</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-violet-600 hover:font-semibold tracking-wider">Hotels</a>
+                        </li>
+                    </nav>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-semibold text-gray-900 tracking-widest text-base mb-3">Travel Resources
+                    </h2>
+
+                    <nav class="list-none mb-10">
+                        <li>
+                            <a href="#" class="hover:text-violet-600 hover:font-semibold tracking-wider">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-violet-600 hover:font-semibold tracking-wider">Customer
+                                Stories</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-violet-600 hover:font-semibold tracking-wider">Travel Tips</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-violet-600 hover:font-semibold tracking-wider">Photo
+                                Galleries</a>
+                        </li>
+                    </nav>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-semibold text-gray-900 tracking-widest text-base mb-3">Special Offers
+                    </h2>
+                    <nav class="list-none mb-10">
+                        <li>
+                            <a href="#" class="hover:text-violet-600 hover:font-semibold tracking-wider">Discounts</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-violet-600 hover:font-semibold tracking-wider">Seasonal
+                                Promotions</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-violet-600 hover:font-semibold tracking-wider">Group Deals</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-violet-600 hover:font-semibold tracking-wider">Newsletter
+                                Signup</a>
+                        </li>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="bg-black">
+            <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+                <p class="text-white text-sm tracking-wider text-center sm:text-left">© 2023 BharatDarshan —
+                    <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" class="text-white ml-1"
+                        target="_blank">@GourKrishnaDey</a>
+                </p>
+                <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+                    <a class="text-white">
+                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-white">
+                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            class="w-5 h-5" viewBox="0 0 24 24">
+                            <path
+                                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-white">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-white">
+                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path stroke="none"
+                                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                            </path>
+                            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                        </svg>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+
+    <!-- Flowbite -->
+    <script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
+
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Owl Carousel .js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        var owl = $('.owl-carousel');
+        owl.owlCarousel({
+            items: 1,
+            loop: true,
+            margin: 10,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true,
+            responsiveClass: true,
+        });
+        $('.play').on('click', function () {
+            owl.trigger('play.owl.autoplay', [1000])
+        })
+        $('.stop').on('click', function () {
+            owl.trigger('stop.owl.autoplay')
+        })
+    </script>
+
+    <!-- Scroll Spy -->
+    <script>
+        // Cache selectors
+        var lastId,
+            topMenu = $("#nav"),
+            topMenuHeight = topMenu.outerHeight() + 40,
+            // All list items
+            menuItems = topMenu.find("a"),
+            // Anchors corresponding to menu items
+            scrollItems = menuItems.map(function () {
+                var item = $($(this).attr("href"));
+                if (item.length) { return item; }
+            });
+
+        // Bind click handler to menu items
+        // so we can get a fancy scroll animation
+        menuItems.click(function (e) {
+            var href = $(this).attr("href"),
+                offsetTop = href === "#" ? 0 : $(href).offset().top - topMenuHeight + 1;
+            $('html, body').stop().animate({
+                scrollTop: offsetTop
+            }, 300);
+            if (!helpMenuDiv.classList.contains("hidden")) {
+                helpMenuDiv.classList.add("hidden");
+            }
+            e.preventDefault();
+        });
+
+        // Bind to scroll
+        $(window).scroll(function () {
+            // Get container scroll position
+            var fromTop = $(this).scrollTop() + topMenuHeight;
+
+            // Get id of current scroll item
+            var cur = scrollItems.map(function () {
+                if ($(this).offset().top < fromTop)
+                    return this;
+            });
+            // Get the id of the current element
+            cur = cur[cur.length - 1];
+            var id = cur && cur.length ? cur[0].id : "";
+
+            if (lastId !== id) {
+                lastId = id;
+                // Set/remove active class
+                menuItems
+                    .parent().removeClass("font-bold border-yellow-600")
+                    .end().filter("[href='#" + id + "']").parent().addClass("font-bold border-yellow-600");
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>
