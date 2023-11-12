@@ -1,0 +1,417 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Currency Converter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto&family=Satisfy&family=Sofia+Sans+Condensed:ital,wght@1,300&family=Urbanist&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bg-gradient-to-r from-teal-300 to-fuchsia-300">
+
+    <div class="h-auto w-full">
+        <img src="./images/Task2BG2.jpg" alt="" class="w-full h-full fixed -z-20">
+        <!-- <div class="w-full h-full fixed -z-10 bg-opacity-40"></div> -->
+    </div>
+
+    <div class="container mx-auto h-full lg:h-screen flex flex-col justify-center items-center px-4 py-3"
+        style="font-family: 'Urbanist', sans-serif;">
+
+        <div id="form" class="w-full bg-white px-8 py-2 rounded-xl shadow-md">
+            <div class="flex flex-col py-4 justify-center items-center">
+                <h1 class="text-center font-semibold tracking-wider text-4xl py-2 px-3"
+                    style="font-family: 'Sofia Sans Condensed', sans-serif;">Currency Converter</h1>
+                <img src="./images/Task2.png" class="w-16 px-2 py-2" alt="">
+                <p class="text-red-500 font-semibold tracking-widest text-sm py-2">Based on Exchange Rate on
+                    11<sup>th</sup> November , 2023
+                </p>
+            </div>
+
+
+            <!-- Currency List -->
+            <div class="grid lg:grid-cols-3 gap-1.5 text-gray-900">
+
+                <div class="flex flex-col justify-center items-start gap-1 px-3">
+                    <h2 class="text-lg font-semibold tracking-widest py-1 w-full">US Dollar (USD)</h2>
+                    <div id="" class="mb-6 grid grid-cols-6 w-full">
+                        <input type="text" id="USD"
+                            class="col-span-5  bg-transparent tracking-widest border text-gray-900 font-bold focus:ring-blue-500 focus:border-blue-500 
+                                block flex-1 min-w-0 w-full text-xl lg:text-2xl text-center border-gray-600 px-4 py-2 rounded-lg"
+                            placeholder="US dollar (USD)">
+                        <div class="flex justify-center w-full items-center">
+                            <span
+                                class="w-full text-center items-center px-3 py-4 text-xl text-white bg-violet-600 border border-r-0 border-gray-300 ">
+                                <p>$</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-center items-start gap-1 px-3">
+                    <h2 class="text-lg font-semibold tracking-widest py-1 w-full">Euro (EUR)</h2>
+                    <div id="" class="mb-6 grid grid-cols-6 w-full">
+                        <input type="text" id="EUR" class="col-span-5  bg-transparent tracking-widest border text-gray-900 font-bold focus:ring-blue-500 focus:border-blue-500 
+                block flex-1 min-w-0 w-full text-xl lg:text-2xl text-center border-gray-600 px-4 py-2 rounded-lg"
+                            placeholder="Euro (EUR)">
+                        <div class="flex justify-center w-full items-center">
+                            <span
+                                class="w-full text-center items-center px-3 py-4 text-xl text-white bg-violet-600 border border-r-0 border-gray-300 ">
+                                <p>€</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-center items-start gap-1 px-3">
+                    <h2 class="text-lg font-semibold tracking-widest py-1 w-full">British Pound Sterling (GBP)</h2>
+                    <div id="" class="mb-6 grid grid-cols-6 w-full">
+                        <input type="text" id="GBP" class="col-span-5  bg-transparent tracking-widest border text-gray-900 font-bold focus:ring-blue-500 focus:border-blue-500 
+                block flex-1 min-w-0 w-full text-xl lg:text-2xl text-center border-gray-600 px-4 py-2 rounded-lg"
+                            placeholder="The pound sterling (GBP)">
+                        <div class="flex justify-center w-full items-center">
+                            <span
+                                class="w-full text-center items-center px-3 py-4 text-xl text-white bg-violet-600 border border-r-0 border-gray-300 ">
+                                <p>£</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-center items-start gap-1 px-3">
+                    <h2 class="text-lg font-semibold tracking-widest py-1 w-full">Japanese Yen (JPY)</h2>
+                    <div id="" class="mb-6 grid grid-cols-6 w-full">
+                        <input type="text" id="JPY" class="col-span-5  bg-transparent tracking-widest border text-gray-900 font-bold focus:ring-blue-500 focus:border-blue-500 
+                block flex-1 min-w-0 w-full text-xl lg:text-2xl text-center border-gray-600 px-4 py-2 rounded-lg"
+                            placeholder="Japanese yen (JPY)">
+                        <div class="flex justify-center w-full items-center">
+                            <span
+                                class="w-full text-center items-center px-3 py-4 text-xl text-white bg-violet-600 border border-r-0 border-gray-300 ">
+                                <p>¥</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-center items-start gap-1 px-3">
+                    <h2 class="text-lg font-semibold tracking-widest py-1 w-full">Indian Rupee (INR)</h2>
+                    <div id="" class="mb-6 grid grid-cols-6 w-full">
+                        <input type="text" id="INR" class="col-span-5  bg-transparent tracking-widest border text-gray-900 font-bold focus:ring-blue-500 focus:border-blue-500 
+                block flex-1 min-w-0 w-full text-xl lg:text-2xl text-center border-gray-600 px-4 py-2 rounded-lg"
+                            placeholder="Indian Rupee (INR)">
+                        <div class="flex justify-center w-full items-center">
+                            <span
+                                class="w-full text-center items-center px-3 py-4 text-xl text-white bg-violet-600 border border-r-0 border-gray-300 ">
+                                <p>₹</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-center items-start gap-1 px-3">
+                    <h2 class="text-lg font-semibold tracking-widest py-1 w-full">Australian Dollar (AUD)</h2>
+                    <div id="" class="mb-6 grid grid-cols-6 w-full">
+                        <input type="text" id="AUD" class="col-span-5  bg-transparent tracking-widest border text-gray-900 font-bold focus:ring-blue-500 focus:border-blue-500 
+                block flex-1 min-w-0 w-full text-xl lg:text-2xl text-center border-gray-600 px-4 py-2 rounded-lg"
+                            placeholder="Australian dollar (AUD)">
+                        <div class="flex justify-center w-full items-center">
+                            <span
+                                class="w-full text-center items-center px-3 py-4 text-xl text-white bg-violet-600 border border-r-0 border-gray-300 ">
+                                <p>AU$</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-center items-start gap-1 px-3">
+                    <h2 class="text-lg font-semibold tracking-wider py-1 w-full">Swiss Franc (CHF)</h2>
+                    <div id="" class="mb-6 grid grid-cols-6 w-full">
+                        <input type="text" id="CHF" class="col-span-5  bg-transparent tracking-widest border text-gray-900 font-bold focus:ring-blue-500 focus:border-blue-500 
+                block flex-1 min-w-0 w-full text-xl lg:text-2xl text-center border-gray-600 px-4 py-2 rounded-lg"
+                            placeholder="Swiss franc (CHF)">
+                        <div class="flex justify-center w-full items-center">
+                            <span
+                                class="w-full text-center items-center px-3 py-4 text-xl text-white bg-violet-600 border border-r-0 border-gray-300 ">
+                                <p>Fr</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-center items-start gap-1 px-3">
+                    <h2 class="text-lg font-semibold tracking-widest py-1 w-full">Saudi Arabian Rial (SAR)</h2>
+                    <div id="" class="mb-6 grid grid-cols-6 w-full">
+                        <input type="text" id="RIAL" class="col-span-5  bg-transparent tracking-widest border text-gray-900 font-bold focus:ring-blue-500 focus:border-blue-500 
+                block flex-1 min-w-0 w-full text-xl lg:text-2xl text-center border-gray-600 px-4 py-2 rounded-lg"
+                            placeholder="Saudi Arabian Rial">
+                        <div class="flex justify-center w-full items-center">
+                            <span
+                                class="w-full text-center items-center px-3 py-4 text-xl text-white bg-violet-600 border border-r-0 border-gray-300 ">
+                                <p>ر.ع</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-center items-start gap-1 px-3">
+                    <h2 class="text-lg font-semibold tracking-widest py-1 w-full">Israeli Shekel (ILS)</h2>
+                    <div id="" class="mb-6 grid grid-cols-6 w-full">
+                        <input type="text" id="SHEKEL" class="col-span-5  bg-transparent tracking-widest border text-gray-900 font-bold focus:ring-blue-500 focus:border-blue-500 
+                block flex-1 min-w-0 w-full text-xl lg:text-2xl text-center border-gray-600 px-4 py-2 rounded-lg"
+                            placeholder="Israeli Shekel">
+                        <div class="flex justify-center w-full items-center">
+                            <span
+                                class="w-full text-center items-center px-3 py-4 text-xl text-white bg-violet-600 border border-r-0 border-gray-300 ">
+                                <p>⟨₪⟩</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- Currency End -->
+
+            <div class="flex justify-center items-center">
+                <button onclick=reset() type="button" class="my-6 block w-auto text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-1 duration-150 focus:ring-blue-800 font-medium rounded-lg 
+    text-lg px-5 py-2 text-center ">Reset</button>
+            </div>
+
+
+            <!-- Copyright-->
+            <h2 class="text-center text-md font-semibold tracking-widest my-2 px-4 py-2 mt-4">
+                <p>&copy; Gour Krishna Dey , 2023</p>
+            </h2>
+            <!-- Copyright end-->
+
+        </div>
+
+
+
+    </div>
+    <!-- Copyright -->
+
+
+    <script>
+
+        let usd = document.getElementById('USD');
+        let eur = document.getElementById('EUR');
+        let gbp = document.getElementById('GBP');
+        let jpy = document.getElementById('JPY');
+        let inr = document.getElementById('INR');
+        let aud = document.getElementById('AUD');
+        let chf = document.getElementById('CHF');
+        let rial = document.getElementById('RIAL');
+        let shekel = document.getElementById('SHEKEL');
+
+        function reset() {
+            usd.value = 0;
+            eur.value = 0;
+            gbp.value = 0;
+            jpy.value = 0;
+            inr.value = 0;
+            aud.value = 0;
+            chf.value = 0;
+            rial.value = 0;
+            shekel.value = 0;
+        }
+
+        usd.addEventListener('input', function () {
+            let usdtemp = parseFloat(usd.value);
+            let eurtemp = 0.934798 * usdtemp;
+            let gbptemp = 0.818239 * usdtemp;
+            let jpytemp = 151.52 * usdtemp;
+            let inrtemp = 83.29425 * usdtemp;
+            let audtemp = 1.572874 * usdtemp;
+            let chftemp = 0.902888 * usdtemp;
+            let rialtemp = (1 / 0.266667) * usdtemp;
+            let shekeltemp = 3.87228 * usdtemp;
+
+            eur.value = parseFloat(eurtemp).toFixed(2);
+            gbp.value = parseFloat(gbptemp).toFixed(2);
+            jpy.value = parseFloat(jpytemp).toFixed(2);
+            inr.value = parseFloat(inrtemp).toFixed(2);
+            aud.value = parseFloat(audtemp).toFixed(2);
+            chf.value = parseFloat(chftemp).toFixed(2);
+            rial.value = parseFloat(rialtemp).toFixed(2);
+            shekel.value = parseFloat(shekeltemp).toFixed(2);
+        })
+
+        eur.addEventListener('input', function () {
+            let eurtemp = parseFloat(eur.value);
+            let usdtemp = 1.067403 * eurtemp;
+            let gbptemp = 0.875194 * eurtemp;
+            let jpytemp = 162.09386556 * eurtemp;
+            let inrtemp = 89.104022 * eurtemp;
+            let audtemp = 1.681754 * eurtemp;
+            let chftemp = 0.96375 * eurtemp;
+            let rialtemp = 4.012614 * eurtemp;
+            let shekeltemp = 4.13683 * eurtemp;
+
+            usd.value = parseFloat(usdtemp).toFixed(2);
+            gbp.value = parseFloat(gbptemp).toFixed(2);
+            jpy.value = parseFloat(jpytemp).toFixed(2);
+            inr.value = parseFloat(inrtemp).toFixed(2);
+            aud.value = parseFloat(audtemp).toFixed(2);
+            chf.value = parseFloat(chftemp).toFixed(2);
+            rial.value = parseFloat(rialtemp).toFixed(2);
+            shekel.value = parseFloat(shekeltemp).toFixed(2);
+        })
+
+        gbp.addEventListener('input', function () {
+            let gbptemp = parseFloat(gbp.value);
+            let usdtemp = 1.2223 * gbptemp;
+            let eurtemp = 1.1437 * gbptemp;
+            let jpytemp = 185.20900872 * gbptemp;
+            let inrtemp = 101.810562 * gbptemp;
+            let audtemp = 1.921578 * gbptemp;
+            let chftemp = 1.1036 * gbptemp;
+            let rialtemp = 4.584213 * gbptemp;
+            let shekeltemp = 4.726745 * gbptemp;
+
+            usd.value = parseFloat(usdtemp).toFixed(2);
+            eur.value = parseFloat(eurtemp).toFixed(2);
+            jpy.value = parseFloat(jpytemp).toFixed(2);
+            inr.value = parseFloat(inrtemp).toFixed(2);
+            aud.value = parseFloat(audtemp).toFixed(2);
+            chf.value = parseFloat(chftemp).toFixed(2);
+            rial.value = parseFloat(rialtemp).toFixed(2);
+            shekel.value = parseFloat(shekeltemp).toFixed(2);
+        })
+
+        jpy.addEventListener('input', function () {
+            let jpytemp = parseFloat(jpy.value);
+            let eurtemp = 0.006175 * jpytemp;
+            let gbptemp = 0.005399 * jpytemp;
+            let usdtemp = 0.0066 * jpytemp;
+            let inrtemp = 0.549847 * jpytemp;
+            let audtemp = 0.010375 * jpytemp;
+            let chftemp = 0.005961 * jpytemp;
+            let rialtemp = 0.024752 * jpytemp;
+            let shekeltemp = 0.025524 * jpytemp;
+
+            eur.value = parseFloat(eurtemp).toFixed(2);
+            gbp.value = parseFloat(gbptemp).toFixed(2);
+            usd.value = parseFloat(usdtemp).toFixed(2);
+            inr.value = parseFloat(inrtemp).toFixed(2);
+            aud.value = parseFloat(audtemp).toFixed(2);
+            chf.value = parseFloat(chftemp).toFixed(2);
+            rial.value = parseFloat(rialtemp).toFixed(2);
+            shekel.value = parseFloat(shekeltemp).toFixed(2);
+        })
+
+        inr.addEventListener('input', function () {
+            let inrtemp = parseFloat(inr.value);
+            let usdtemp = 0.01201 * inrtemp;
+            let gbptemp = 0.009813 * inrtemp;
+            let jpytemp = 1.81834648 * inrtemp;
+            let eurtemp = 0.011223 * inrtemp;
+            let audtemp = 0.018874 * inrtemp;
+            let chftemp = 0.01084 * inrtemp;
+            let rialtemp = 0.04502 * inrtemp;
+            let shekeltemp = 0.04624 * inrtemp;
+
+            usd.value = parseFloat(usdtemp).toFixed(2);
+            gbp.value = parseFloat(gbptemp).toFixed(2);
+            jpy.value = parseFloat(jpytemp).toFixed(2);
+            eur.value = parseFloat(eurtemp).toFixed(2);
+            aud.value = parseFloat(audtemp).toFixed(2);
+            chf.value = parseFloat(chftemp).toFixed(2);
+            rial.value = parseFloat(rialtemp).toFixed(2);
+            shekel.value = parseFloat(shekeltemp).toFixed(2);
+        })
+
+        aud.addEventListener('input', function () {
+            let audtemp = parseFloat(aud.value);
+            let usdtemp = 0.636092 * audtemp;
+            let eurtemp = 0.594617 * audtemp;
+            let jpytemp = 96.38381782 * audtemp;
+            let inrtemp = 52.982794 * audtemp;
+            let gbptemp = 0.52058 * audtemp;
+            let chftemp = 0.574324 * audtemp;
+            let rialtemp = 2.38597 * audtemp;
+            let shekeltemp = 2.460071 * audtemp;
+
+            usd.value = parseFloat(usdtemp).toFixed(2);
+            eur.value = parseFloat(eurtemp).toFixed(2);
+            jpy.value = parseFloat(jpytemp).toFixed(2);
+            inr.value = parseFloat(inrtemp).toFixed(2);
+            gbp.value = parseFloat(gbptemp).toFixed(2);
+            chf.value = parseFloat(chftemp).toFixed(2);
+            rial.value = parseFloat(rialtemp).toFixed(2);
+            shekel.value = parseFloat(shekeltemp).toFixed(2);
+        })
+
+        chf.addEventListener('input', function () {
+            let chftemp = parseFloat(chf.value);
+            let eurtemp = 1.035342 * chftemp;
+            let gbptemp = 0.906125 * chftemp;
+            let jpytemp = 167.82258708 * chftemp;
+            let inrtemp = 92.257335 * chftemp;
+            let audtemp = 1.74119 * chftemp;
+            let usdtemp = 1.107557 * chftemp;
+            let rialtemp = 4.154428 * chftemp;
+            let shekeltemp = 4.28799 * chftemp;
+
+            eur.value = parseFloat(eurtemp).toFixed(2);
+            gbp.value = parseFloat(gbptemp).toFixed(2);
+            jpy.value = parseFloat(jpytemp).toFixed(2);
+            inr.value = parseFloat(inrtemp).toFixed(2);
+            aud.value = parseFloat(audtemp).toFixed(2);
+            usd.value = parseFloat(usdtemp).toFixed(2);
+            rial.value = parseFloat(rialtemp).toFixed(2);
+            shekel.value = parseFloat(shekeltemp).toFixed(2);
+        })
+
+        rial.addEventListener('input', function () {
+            let rialtemp = parseFloat(rial.value);
+            let usdtemp = 0.26660 * rialtemp;
+            let gbptemp = 0.22 * rialtemp;
+            let jpytemp = 40.39420616 * rialtemp;
+            let inrtemp = 22.2126 * rialtemp;
+            let audtemp = 0.419901 * rialtemp;
+            let chftemp = 0.24 * rialtemp;
+            let eurtemp = 0.24979 * rialtemp;
+            let shekeltemp = 1.02698 * rialtemp;
+
+            usd.value = parseFloat(usdtemp).toFixed(2);
+            gbp.value = parseFloat(gbptemp).toFixed(2);
+            jpy.value = parseFloat(jpytemp).toFixed(2);
+            inr.value = parseFloat(inrtemp).toFixed(2);
+            aud.value = parseFloat(audtemp).toFixed(2);
+            chf.value = parseFloat(chftemp).toFixed(2);
+            eur.value = parseFloat(eurtemp).toFixed(2);
+            shekel.value = parseFloat(shekeltemp).toFixed(2);
+        })
+
+        shekel.addEventListener('input', function () {
+            let shekeltemp = parseFloat(shekel.value);
+            let usdtemp = 0.258566 * shekeltemp;
+            let eurtemp = 0.241707 * shekeltemp;
+            let jpytemp = 39.13792391 * shekeltemp;
+            let inrtemp = 21.537097 * shekeltemp;
+            let audtemp = 0.406654 * shekeltemp;
+            let chftemp = 0.233082 * shekeltemp;
+            let rialtemp = 0.968623 * shekeltemp;
+            let gbptemp = 0.211703 * shekeltemp;
+
+            usd.value = parseFloat(usdtemp).toFixed(2);
+            eur.value = parseFloat(eurtemp).toFixed(2);
+            jpy.value = parseFloat(jpytemp).toFixed(2);
+            inr.value = parseFloat(inrtemp).toFixed(2);
+            aud.value = parseFloat(audtemp).toFixed(2);
+            chf.value = parseFloat(chftemp).toFixed(2);
+            rial.value = parseFloat(rialtemp).toFixed(2);
+            gbp.value = parseFloat(gbptemp).toFixed(2);
+        })
+
+    </script>
+</body>
+
+</html>
