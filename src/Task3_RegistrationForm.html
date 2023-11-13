@@ -1,0 +1,636 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&family=Oswald:wght@500&family=Pacifico&family=Poppins:wght@300&family=Raleway&family=Roboto&family=Satisfy&family=Sofia+Sans+Condensed:ital,wght@1,300&family=Urbanist&display=swap"
+        rel="stylesheet">
+
+    <style>
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            background-color: white;
+            padding: 1%;
+            border-radius: 45px;
+            color: orange;
+        }
+
+        input[type="time"]::-webkit-calendar-picker-indicator {
+            background-color: white;
+            padding: 1%;
+            border-radius: 45px;
+            color: orange;
+        }
+
+        .ra-select {
+            width: 30%;
+            padding: 10px;
+            /* Replace Default styling (arrow) */
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10.127L12 18.127L20 10.127H4Z" fill="%238E8E93"/></svg>');
+            background-repeat: no-repeat;
+            background-position-y: 50%;
+            background-position-x: 98%;
+        }
+
+
+        .error {
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="h-full w-full -z-40 fixed">
+        <img src="./images/Task3.jpg" alt="" class="w-full h-full ">
+    </div>
+
+    <div class="">
+        <!-- Form -->
+        <div class="h-max  ">
+            <div class="">
+                <!-- Heading -->
+                <div class="container mx-auto flex items-center h-auto py-2 px-2" data-wow-duration="1s"
+                    style="font-family: 'Satisfy', cursive;">
+                    <hr class="flex-grow border-t border-orange-400">
+
+                    <span class="px-3 py-8 text-transparent tracking-widest bg-clip-text bg-gradient-to-b from-orange-400 via-amber-400 to-orange-500 
+                    text-2xl xl:text-4xl font-semibold">
+                        Registration Form
+                    </span>
+                    <hr class="flex-grow border-t border-orange-400">
+                </div>
+                <!-- Heading -->
+
+                <!-- h-auto -->
+                <div class="container xl:w-2/3 mx-auto text-white text-xs md:text-sm xl:text-base font-medium tracking-widest px-4 py-1"
+                    style="font-family: 'Urbanist', sans-serif;">
+                    <form id="reservation" action="" method="get" class="px-2 py-1.5">
+
+                        <!-- Basic Info Section -->
+                        <!-- Header -->
+                        <div class="flex justify-between px-6 items-center py-2 mb-4 bg-orange-500 text-white">
+                            <h1 class="text-xl font-semibold tracking-widest">Personal Details</h1>
+                            <button type="button" id="btn1" onclick="dropdownToggle(1,'basic');"
+                                class="font-extrabold bg-white text-orange-500 rounded-full p-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </button>
+                        </div>
+                        <!-- Header -->
+                        <div id="basic" class="md:grid md:grid-cols-2 gap-5">
+                            <div class="px-2 py-1 flex flex-col justify-center items-start gap-2 ">
+                                <label class="font-semibold" for="fname">First Name <span>*</span></label>
+                                <input type="text" name="fname" id="fname" placeholder="Enter First Name (Ex - John)"
+                                    class="w-full bg-transparent px-4 py-2.5 rounded-md border-2 border-orange-400 placeholder:font-medium placeholder:text-white placeholder:tracking-wider">
+                            </div>
+                            <div class="px-2 py-1 flex flex-col justify-center items-start gap-2 ">
+                                <label class="font-semibold" for="lname">Last Name <span>*</span></label>
+                                <input type="text" name="lname" id="lname" placeholder="Enter Surname (Ex - Dey)"
+                                    class="w-full bg-transparent px-4 py-2.5 rounded-md border-2 border-orange-400 placeholder:font-medium placeholder:text-white placeholder:tracking-wider">
+                            </div>
+                            <div class="px-2 py-1 flex flex-col justify-center items-start gap-2 ">
+                                <label class="font-semibold" for="gender">Gender <span>*</span></label>
+                                <select id="gender"
+                                    class="ra-select w-full bg-transparent tracking-widest px-4 py-2.5 rounded-md border-2 border-orange-400 text-white placeholder:tracking-wider">
+                                    <option class="text-gray-900 tracking-wider" value="male">Male</option>
+                                    <option class="text-gray-900 tracking-wider" value="female">Female</option>
+                                    <option class="text-gray-900 tracking-wider" value="nonbinary">Non Binary</option>
+                                    <option class="text-gray-900 tracking-wider" value="transgender">Transgender
+                                    </option>
+                                    <option class="text-gray-900 tracking-wider" value="prefernottosay">Prefer Not to
+                                        Say</option>
+                                </select>
+                            </div>
+                            <div class="px-2 py-1 flex flex-col justify-center items-start gap-2 ">
+                                <label class="font-semibold" for="mobile">Date of Birth <span>*</span></label>
+                                <input type="date" name="date" id="date" placeholder="MM/DD/YYYY"
+                                    class="w-full bg-transparent px-4 py-2.5 rounded-md border-2 border-orange-400">
+                            </div>
+                        </div>
+                        <!-- Basic Info Section End -->
+
+                        <!-- Contact Section -->
+                        <!-- Header -->
+                        <div class="flex justify-between px-6 items-center py-2 mt-8 mb-4 bg-orange-500 text-white">
+                            <h1 class="text-xl font-semibold tracking-widest">Contact Details</h1>
+                            <button type="button" id="btn2" onclick="dropdownToggle(2,'contact');"
+                                class="font-extrabold bg-white text-orange-500 rounded-full p-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </button>
+                        </div>
+                        <!-- Header -->
+                        <div id="contact" class="md:grid md:grid-cols-2 gap-5 mt-4">
+                            <div class="px-2 py-1 flex flex-col justify-center items-start gap-2 ">
+                                <label class="font-semibold" for="mobile">Mobile Number <span>*</span></label>
+                                <input type="text" name="mobile" id="mobile"
+                                    placeholder="Your Phone Number (Ex - 1800 200 3655 9874)"
+                                    class="w-full bg-transparent px-4 py-2.5 rounded-md border-2 border-orange-400 placeholder:font-medium placeholder:text-white placeholder:tracking-wider">
+                            </div>
+                            <div class="px-2 py-1 flex flex-col justify-center items-start gap-2 ">
+                                <label class="font-semibold" for="email">Email Address <span>*</span></label>
+                                <input type="email" name="email" id="email"
+                                    placeholder="Your Email Address (Ex - abc@cde.xyz)"
+                                    class="w-full bg-transparent px-4 py-2.5 rounded-md border-2 border-orange-400 placeholder:font-medium placeholder:text-white placeholder:tracking-wider">
+                            </div>
+                            <div class="px-2 py-1 flex flex-col justify-center items-start gap-2 ">
+                                <label class="font-semibold" for="social">Social Media URL <span></span></label>
+                                <input type="url" name="social" id="social"
+                                    placeholder="Your Linkedin Profile url (Ex - https://abc@cde.xyz)"
+                                    class="w-full bg-transparent px-4 py-2.5 rounded-md border-2 border-orange-400 placeholder:font-medium placeholder:text-white placeholder:tracking-wider">
+                            </div>
+
+                        </div>
+                        <!-- Contact Section End -->
+
+                        <!-- Address Details -->
+                        <!-- Header -->
+                        <div class="flex justify-between px-6 items-center py-2 mt-8 mb-4 bg-orange-500 text-white">
+                            <h1 class="text-xl font-semibold tracking-widest">Address Details</h1>
+                            <button type="button" id="btn3" onclick="dropdownToggle(3,'address');"
+                                class="font-extrabold bg-white text-orange-500 rounded-full p-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </button>
+                        </div>
+                        <!-- Header -->
+                        <div id="address" class="md:grid md:grid-cols-2 gap-5 mt-4">
+                            <div class="px-2 py-1 flex flex-col justify-center items-start gap-2 ">
+                                <label class="font-semibold" for="adline1">Address Line 1 <span>*</span></label>
+                                <input type="text" name="adline1" id="adline1"
+                                    placeholder="House/Flat Number (Ex - 23/B/6 Saptarchee Appartment)"
+                                    class="w-full bg-transparent px-4 py-2.5 rounded-md border-2 border-orange-400 placeholder:font-medium placeholder:text-white placeholder:tracking-wider">
+                            </div>
+                            <div class="px-2 py-1 flex flex-col justify-center items-start gap-2 ">
+                                <label class="font-semibold" for="adline2">Address Line 2 <span></span></label>
+                                <input type="text" name="adline2" id="adline2"
+                                    placeholder="Street Number / Locality Number (Ex - Sushil Pal Sarani , Nijamulnagar )"
+                                    class="w-full bg-transparent px-4 py-2.5 rounded-md border-2 border-orange-400 placeholder:font-medium placeholder:text-white placeholder:tracking-wider">
+                            </div>
+                            <div class="px-2 py-1 flex flex-col justify-center items-start gap-2 ">
+                                <label class="font-semibold" for="pincode">Pincode <span>*</span></label>
+                                <input type="text" name="pincode" id="pincode"
+                                    placeholder="Enter Locality Pincode Number (Ex - 753698)"
+                                    class="w-full bg-transparent px-4 py-2.5 rounded-md border-2 border-orange-400 placeholder:font-medium placeholder:text-white placeholder:tracking-wider">
+                            </div>
+                            <div class="px-2 py-1 flex flex-col justify-center items-start gap-2 ">
+                                <label class="font-semibold" for="landmark">Landmark <span>*</span></label>
+                                <input type="text" name="landmark" id="landmark"
+                                    placeholder="Right side second house , beside Lift"
+                                    class="w-full bg-transparent px-4 py-2.5 rounded-md border-2 border-orange-400 placeholder:font-medium placeholder:text-white placeholder:tracking-wider">
+                            </div>
+
+                        </div>
+                        <!-- Address Details End -->
+
+                        <!-- Educational Details -->
+                        <!-- Header -->
+                        <div class="flex justify-between px-6 items-center py-2 mt-8 mb-4 bg-orange-500 text-white">
+                            <h1 class="text-xl font-semibold tracking-widest">Educational Details</h1>
+                            <button type="button" id="btn4" onclick="dropdownToggle(4,'education');"
+                                class="font-extrabold bg-white text-orange-500 rounded-full p-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </button>
+                        </div>
+                        <!-- Header -->
+
+                        <div id="education" class="md:grid md:grid-cols-2 gap-5 mt-4">
+                            <div class="px-2 py-1 flex flex-col justify-center items-start gap-2 ">
+                                <label class="font-semibold" for="edu_qualification">Highest Educational Quallifications
+                                    <span>*</span></label>
+                                <select id="edu_qualification"
+                                    class="ra-select w-full bg-transparent tracking-widest px-4 py-2.5 rounded-md border-2 border-orange-400 text-white placeholder:tracking-wider">
+                                    <option class="text-gray-900 tracking-wider" value="">Primary School</option>
+                                    <option class="text-gray-900 tracking-wider" value="">Middle School</option>
+                                    <option class="text-gray-900 tracking-wider" selected value="">High School</option>
+                                    <option class="text-gray-900 tracking-wider" value="">10+2 or equivalent</option>
+                                    <option class="text-gray-900 tracking-wider" value="">Bachelor of Arts (BA)</option>
+                                    <option class="text-gray-900 tracking-wider" value="">Bachelor of Science (BSc)
+                                    </option>
+                                    <option class="text-gray-900 tracking-wider" value="">Bachelor of Commerce (BCom)
+                                    </option>
+                                    <option class="text-gray-900 tracking-wider" value="">Bachelor of Engineering (BE)
+                                    </option>
+                                    <option class="text-gray-900 tracking-wider" value="">Bachelor of Technology (BTech)
+                                    </option>
+                                    <option class="text-gray-900 tracking-wider" value="">Bachelor of Business
+                                        Administration (BBA)</option>
+                                    <option class="text-gray-900 tracking-wider" value="">Bachelor of Computer
+                                        Applications (BCA)</option>
+                                    <option class="text-gray-900 tracking-wider" value="">Bachelor of Fine Arts (BFA)
+                                    </option>
+                                    <option class="text-gray-900 tracking-wider" value="">Bachelor of Design (BDes)
+                                    </option>
+                                    <option class="text-gray-900 tracking-wider" value="">Diploma</option>
+                                    <option class="text-gray-900 tracking-wider" value="">Master of Arts (MA)</option>
+                                    <option class="text-gray-900 tracking-wider" value="">Master of Science (MSc)
+                                    </option>
+                                    <option class="text-gray-900 tracking-wider" value="">Master of Commerce (MCom)
+                                    </option>
+                                    <option class="text-gray-900 tracking-wider" value="">Master of Engineering (ME)
+                                    </option>
+                                    <option class="text-gray-900 tracking-wider" value="">Master of Technology (MTech)
+                                    </option>
+                                    <option class="text-gray-900 tracking-wider" value="">Master of Business
+                                        Administration (MBA)</option>
+                                    <option class="text-gray-900 tracking-wider" value="">Master of Computer
+                                        Applications (MCA)</option>
+                                    <option class="text-gray-900 tracking-wider" value="">Master of Fine Arts (MFA)
+                                    </option>
+                                    <option class="text-gray-900 tracking-wider" value="">Master of Design (MDes)
+                                    </option>
+                                    <option class="text-gray-900 tracking-wider" value="">Doctor of Philosophy (PhD)
+                                    </option>
+                                    <option class="text-gray-900 tracking-wider" value="">Chartered Accountancy (CA)
+                                    </option>
+                                    <option class="text-gray-900 tracking-wider" value="">Company Secretary (CS)
+                                    </option>
+                                    <option class="text-gray-900 tracking-wider" value="">Cost and Management
+                                        Accountancy (CMA)</option>
+                                    <option class="text-gray-900 tracking-wider" value="">Law (LLB)</option>
+                                    <option class="text-gray-900 tracking-wider" value="">Polytechnic</option>
+                                </select>
+                            </div>
+                            <div class="px-2 py-1 flex flex-col justify-center items-start gap-2 ">
+                                <label class="font-semibold" for="edu_field">Highest Educational Quallifications
+                                    <span>*</span></label>
+                                <select id="edu_field"
+                                    class="ra-select w-full bg-transparent tracking-widest px-4 py-2.5 rounded-md border-2 border-orange-400 text-white placeholder:tracking-wider">
+                                    <option class="text-gray-900 tracking-wider" value=""> Aerospace Engineering
+                                    </option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Agriculture</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Anthropology</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Astronomy</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Biology</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Business Administration
+                                    </option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Chemistry</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Civil Engineering</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Communication</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Computer Science</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Computer Science</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Data Science</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Dentistry</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Early Childhood Education
+                                    </option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Economics</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Education</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Electrical Engineering
+                                    </option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Environmental Science
+                                    </option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Environmental Science
+                                    </option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Fashion Design</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Finance</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Fine Arts</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Foreign Languages</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Geology</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Graphic Design</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> History</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Human Resources</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Industrial Design</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Information Technology
+                                    </option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Interdisciplinary Studies
+                                    </option>
+                                    <option class="text-gray-900 tracking-wider" value=""> International Business
+                                    </option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Journalism</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Law</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Linguistics</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Linguistics</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Literature</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Marketing</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Mathematics</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Mechanical Engineering
+                                    </option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Media Studies</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Medicine</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Nursing</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Oceanography</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Performing Arts</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Pharmacy</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Philosophy</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Physics</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Political Science</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Psychology</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Public Health</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Sociology</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Software Engineering</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Special Education</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Statistics</option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Sustainability Studies
+                                    </option>
+                                    <option class="text-gray-900 tracking-wider" value=""> Veterinary Sciences</option>
+                                </select>
+                            </div>
+                            <div class="px-2 py-1 flex flex-col justify-center items-start gap-2 ">
+                                <label class="font-semibold" for="edu_institute">Instritute Name <span>*</span></label>
+                                <input type="text" name="edu_institute" id="edu_institute"
+                                    placeholder="Your Passing Institute Name (Ex - NIT Durgapur )"
+                                    class="w-full bg-transparent px-4 py-2.5 rounded-md border-2 border-orange-400 placeholder:font-medium placeholder:text-white placeholder:tracking-wider">
+                            </div>
+                            <div class="px-2 py-1 flex flex-col justify-center items-start gap-2 ">
+                                <label class="font-semibold" for="edu_passingyear">Year of Passing
+                                    <span>*</span></label>
+                                <input type="date" name="edu_passingyear" id="edu_passingyear"
+                                    placeholder="Your Passing Year (Ex - 12/10/2023 )"
+                                    class="w-full bg-transparent px-4 py-2.5 rounded-md border-2 border-orange-400 placeholder:font-medium placeholder:text-white placeholder:tracking-wider">
+                            </div>
+                            <div class="px-2 py-1 flex flex-col justify-center items-start gap-2 ">
+                                <label class="font-semibold" for="edu_percentage">Percentage (%) <span>*</span></label>
+                                <input type="text" name="edu_percentage" id="edu_percentage"
+                                    placeholder="In case of CGPA put equivalent Percentage (Ex - 96.36 )"
+                                    class="w-full bg-transparent px-4 py-2.5 rounded-md border-2 border-orange-400 placeholder:font-medium placeholder:text-white placeholder:tracking-wider">
+                            </div>
+                        </div>
+
+
+                        <!-- Login Credentials -->
+                        <!-- Header -->
+                        <div class="flex justify-between px-6 items-center py-2 mt-8 mb-4 bg-orange-500 text-white">
+                            <h1 class="text-xl font-semibold tracking-widest">Login Credentials</h1>
+                            <button type="button" id="btn5" onclick="dropdownToggle(5,'login');"
+                                class="font-extrabold bg-white text-orange-500 rounded-full p-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </button>
+                        </div>
+                        <!-- Header -->
+
+                        <div id="login" class="md:grid md:grid-cols-2 gap-5 mt-4">
+                            <div class="px-2 py-1 flex flex-col justify-center items-start gap-2 ">
+                                <label class="font-semibold" for="userid">UserId <span>*</span></label>
+                                <input type="text" name="userid" id="userid"
+                                    placeholder="Your UserId will be shown (Ex - drcs17 )"
+                                    class="w-full bg-transparent px-4 py-2.5 rounded-md border-2 border-orange-400 placeholder:font-medium placeholder:text-white placeholder:tracking-wider">
+                            </div>
+                            <div class="px-2 py-1 flex flex-col justify-center items-start gap-2 ">
+                                <label class="font-semibold" for="passwordNew">Password
+                                    <span>*</span></label>
+                                <input type="password" name="passwordNew" id="passwordNew"
+                                    placeholder="1 Lowercase 1 Uppercase & 1 Number required (Ex - India1947 )"
+                                    class="w-full bg-transparent px-4 py-2.5 rounded-md border-2 border-orange-400 placeholder:font-medium placeholder:text-white placeholder:tracking-wider">
+                            </div>
+                            <div class="px-2 py-1 flex flex-col justify-center items-start gap-2 ">
+                                <label class="font-semibold" for="repassword">Retype Password <span>*</span></label>
+                                <input type="text" name="repassword" id="repassword"
+                                    placeholder="In case of CGPA put equivalent Percentage (Ex - 96.36 )"
+                                    class="w-full bg-transparent px-4 py-2.5 rounded-md border-2 border-orange-400 placeholder:font-medium placeholder:text-white placeholder:tracking-wider">
+                            </div>
+                        </div>
+                        <!-- Login Credentials End -->
+
+                        <div class="w-full flex justify-center px-6 items-center py-2 mt-8 mb-4 gap-4 text-white">
+                            <input checked id="agree" type="checkbox" value="" class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500">
+                            <label for="agree" class="text-base font-medium tracking-wider">I hereby
+                                consent to the collection, processing, and use of my personal information for the
+                                purposes outlined in the Privacy Policy. I understand that I have the right to
+                                withdraw this consent at any time.</label>
+                        </div>
+
+                </div>
+
+
+
+
+                <!-- Button -->
+                <div class="flex justify-center items-center my-8 px-2 py-3">
+                    <button type="submit" class="px-4 py-2.5 w-1/2 text-base lg:text-lg text-white font-semibold tracking-widest bg-gradient-to-r from-orange-400 via-amber-500 to-orange-500 
+                active:translate-x-2 active:translate-y-2 duration-300">Submit</button>
+                </div>
+                <!-- Button -->
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!-- Form -->
+
+
+    </div>
+
+
+
+
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+
+    <script>
+        jQuery.validator.addMethod("phoneIndia", function (phone_number, element) {
+            phone_number = phone_number.replace(/\s+/g, "");
+            return this.optional(element) || phone_number.length > 9 &&
+                phone_number.match(/^(\+?1-?)?(\([2-9]\d{2}\)|[2-9]\d{2})-?[2-9]\d{2}-?\d{4}$/);
+        }, "Please specify a valid phone number");
+
+        var value = $("#password_reg").val();
+
+        $.validator.addMethod("checklower", function (value) {
+            return /[a-z]/.test(value);
+        });
+        $.validator.addMethod("checkupper", function (value) {
+            return /[A-Z]/.test(value);
+        });
+        $.validator.addMethod("checkdigit", function (value) {
+            return /[0-9]/.test(value);
+        });
+        $.validator.addMethod("pwcheck", function (value) {
+            return /^[A-Za-z0-9\d=!\-@._*]*$/.test(value) && /[a-z]/.test(value) && /\d/.test(value) && /[A-Z]/.test(value);
+        });
+
+        $("#reservation").validate({
+            rules: {
+                fname: {
+                    required: true,
+                    minlength: 2,
+                },
+                lname: {
+                    required: true,
+                    minlength: 2,
+                },
+                social: {
+                    required: true,
+                    url: true,
+                },
+                mobile: {
+                    required: true,
+                    phoneIndia: true,
+                },
+                email: {
+                    required: true,
+                    email: true,
+                },
+                date: "required",
+                edu_passingyear: "required",
+                adline1: "required",
+                adline2: "required",
+                landmark: "required",
+                pincode: {
+                    required: true,
+                    number: true,
+                    minlength: 6,
+                    maxlength: 6,
+                },
+                edu_institute: "required",
+                edu_percentage: {
+                    required: true,
+                    number: true,
+                },
+                userid: "required",
+                passwordNew: {
+                    minlength: 6,
+                    maxlength: 30,
+                    required: true,
+                    pwcheck: true,
+                    checklower: true,
+                    checkupper: true,
+                    checkdigit: true
+                },
+                repassword: {
+                    required: true ,
+                    equalTo: "#passwordNew",
+                },
+                agree: true ,
+            },
+            messages: {
+                fname: {
+                    required: "First Name is Required",
+                    minlength: "Name Must have atleast 2 Characters",
+                },
+                lname: {
+                    required: "Surname is Required",
+                    minlength: "Name Must have atleast 2 Characters",
+                },
+                social: {
+                    required: "Please Enter atleast one Social Media Link",
+                    url: "Enter a valid Link",
+                },
+                mobile: {
+                    required: "Phone Number is Required",
+                    phoneIndia: "Enter a Valid Phone Number",
+                },
+                email: {
+                    required: "Email address is Required",
+                    email: "Enter a Valid Email Address",
+                },
+                date: {
+                    required: "Please Select Date of Birth",
+                },
+                edu_passingyear: {
+                    required: "Please Select Date of Passing Institution",
+                },
+                adline1: {
+                    required: "Enter Address Line",
+                },
+                pincode: {
+                    required: "Please Enter Your Locality Pincode",
+                    minlength: "Zipcode length must be 6",
+                    maxlength: "Zipcode length must be 6",
+                    number: "Pincode is only Number",
+                },
+                landmark: {
+                    required: "Please Enter Your Locality Pincosde",
+                },
+                edu_institute: {
+                    required: "Please Enter Your Passing Institute",
+                },
+                edu_percentage: {
+                    required: "Enter highest Qualification's Percentage",
+                    number: "Enter a Valid Percentage",
+                },
+                userid: "Please Enter a UserId",
+                passwordNew: {
+                    required: "Password is a Must",
+                    pwcheck: "Password is not strong enough",
+                    checklower: "Need atleast 1 lowercase alphabet",
+                    checkupper: "Need atleast 1 uppercase alphabet",
+                    checkdigit: "Need atleast 1 digit"
+                },
+                repassword: {
+                    required: "Retype Your Password",
+                    equalTo: "Password & Retype Password mismatched",
+                },
+                agree: {
+                    required: "Please Read the Consent & Tick the Checkbox ",
+                },
+
+            },
+
+
+            submitHandler: function (form) {
+                alert(`Thank you for choosing Urban Spice!
+                    Your reservation request has been received.We will review your details and get back to you shortly to confirm your reservation.If you have any urgent inquiries or changes to your booking, please contact us directly at (+91) 1800 255 369 1588.We look forward to serving you and making your dining experience exceptional!`);
+                form.submit();
+            }
+
+        });
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+
+
+    <!-- Owl Carousel .js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        function dropdownToggle(num, target) {
+            var x1 = target;
+            var b = "btn" + num;
+
+            console.log(x1, " ", target);
+
+            var x = document.getElementById(x1);
+            const btn1 = document.getElementById(b).classList;
+
+
+            if (x.style.display === "none") {
+                x.style.display = "grid";
+                btn1.add("rotate-180");
+            } else {
+                x.style.display = "none";
+                btn1.remove("rotate-180");
+            }
+            btn1.add("duration-300");
+        }
+    </script>
+
+
+</body>
+
+</html>
